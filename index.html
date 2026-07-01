@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./fontawesome-free-6.7.2-web/css/all.min.css">
+        <style>
+            html
+            {
+                scroll-behavior: smooth;
+            }
+    
+        body
+        {    
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        nav{
+            width: 100%;
+            height: 80px;
+            background-color: #030014;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            position: fixed;
+        }
+        p
+         {
+           font-size: 35px;
+           font-weight: bold;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+           color: white;
+           margin: 0;
+           
+         }
+         #white
+         
+         {
+            color: white;
+         }
+         #purple
+         {
+             color: #8B5CF6;
+         }
+         #font
+         {
+            display: flex;
+            padding-left: 70px;
+
+            
+         }
+         ul{
+            width: 20%;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 400px;
+            font-size: 20px;
+            list-style: none;
+         }
+         a{
+            color: white;
+            text-decoration:none;
+         }
+         a:hover
+         {
+            color: #8B5CF6;
+            text-decoration: underline;
+            text-decoration-color: #8B5CF6;
+         }
+         #home
+         {
+             width: 100%;
+             height: 100vh;
+             background-color: black;
+             display: flex;
+             justify-content: space-between;
+             align-items: center;
+             scroll-margin-top: 90px;
+         }
+         main
+         {      
+                width: 100%;
+                
+         }
+         #info
+         {
+            width: 50%;
+            height: 80%;
+            background-color: black;
+            padding-left: 70px;
+            
+         }
+         #line
+         {
+            color:transparent;
+            background: linear-gradient(to right,#fc72ff,#8f68ff,#487bff,#8f68ff,#fc72ff);
+            -webkit-background-clip: text;
+         }
+         #dis
+         {
+            font-size: 26px;
+            color: white;
+            font-weight:lighter;
+            margin-top: 10px;
+            line-height: 1.8;
+            
+         }
+         #hi
+         {
+            margin-top: 10px;
+            
+         }
+         #download
+         {
+            width:300px;
+            height:50px;
+            background:black;
+            border:1px solid white;
+            border-radius:10px;
+            color:white;
+            font-size:16px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-decoration:none;
+            margin-top:30px;
+            margin-left:470px;
+            transition:0.3s;
+         }
+
+         #download:hover
+         {
+           background:purple;
+           color:black;
+         }
+         #photo
+         {   width: 50%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            background-color: black;
+            align-items: center;
+            padding: 0;
+            
+         }
+         #skillhead h2,#about h2
+        {
+            background: linear-gradient(90deg,#fc72ff,#8f68ff,#487bff,#8f68ff,#fc72ff);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation-name: gradientMove;
+            animation-duration:  5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes gradientMove
+        {
+          0%
+          {
+            background-position: 0%;
+          }
+         100%
+         {
+            background-position: 300%;
+          }
+        }
+         #photo img
+         {
+            width: 540px;
+            height: 540px;
+            margin-top: -130px;
+            border-radius: 360px;
+         }
+         
+         #glow
+         {
+            position: relative;
+            width: 580px;
+            height: 580px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            filter:drop-shadow(0 0 15px rgba(139,92,246,0.8))
+            drop-shadow(0 0 30px rgba(139,92,246,0.7))
+            drop-shadow(0 0 45px rgba(139,92,246,0.5))
+            drop-shadow(0 0 50px rgba(139,92,246,0.3));
+
+            
+         }
+         #glow
+        {
+           animation-name: float;
+           animation-duration: 4s;
+           animation-timing-function:ease-in-out ;
+           animation-iteration-count: infinite ;
+         }
+
+         @keyframes float
+         {
+           0%
+         {
+            transform: translateY(0);
+         }
+
+         50%
+         {
+           transform: translateY(-12px);
+         }
+
+         100%
+         {
+           transform: translateY(0);
+         }
+         }
+         #about
+         {
+            width: 100%;
+            height: 800px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             flex-direction: column;
+             scroll-margin-top: 90px;
+         }
+         #Ame
+         {  
+            width: 80%;
+            height: 550px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+           
+            
+         }
+         .card
+         {
+            width: 30%;
+            height: 450px;
+            border: 4px solid white; 
+            border-radius: 9px;
+           position: relative;
+           border: 1px solid gray;
+           transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+         .heading
+         {
+              position: absolute;
+              top: 30px;
+              left: 30px;
+              display: flex;
+              align-items: center;
+              gap: 15px;  
+         }
+
+         #user
+         {
+            color: purple;
+            font-size: 40px;
+         }
+
+         #infome
+         {
+           font-size: 29px;
+           color: white;
+           margin: 0;
+           font-weight: lighter;
+         }
+         #dis2
+         {
+            color: gray;
+            font-size: 24px;
+            position: absolute;
+            top: 140px;
+            left: 14px;
+            width: 90%;
+            height: 50%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         }
+         #education i{
+            color: purple;
+            font-size: 45px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+         }
+         #education p
+         {
+            position:absolute;
+             top:30px;
+             font-size:24px;
+             left:90px;
+             color:white;
+             font-weight:500;
+         }
+
+         #education span
+         {
+           position:absolute;
+           top:70px;
+           left:90px;
+           font-size:18px;
+           color:gray;
+         }
+         #Email i{
+            color: purple;
+            font-size: 45px;
+            position: absolute;
+            top: 160px;
+            left: 30px;
+         }
+         #Location i{
+            color: purple;
+            font-size: 45px;
+            position: absolute;
+            top: 300px;
+            left: 34px;
+         }
+         #Email p{
+          position:absolute;
+          top:160px;
+          left:90px;
+          font-size:24px;
+          font-weight:500;
+          color:white;
+         }
+
+         #Email span
+         {
+           position:absolute;
+           top:200px;
+           left:90px;
+           font-size:18px;
+           color:gray;
+         }
+
+         #Location p
+         {
+           position:absolute;
+           top:300px;
+           left:90px;
+           font-size:24px;
+           font-weight:500;
+           color:white;
+         }
+
+         #Location span
+         {
+            position:absolute;
+            top:340px;
+            left:90px;
+            font-size:18px;
+            color:gray;
+         }
+
+
+
+         #status i{
+            color: purple;
+            font-size: 45px;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+         }
+         #status p
+         {
+            position:absolute;
+             top:30px;
+             font-size:24px;
+             left:90px;
+             color:white;
+             font-weight:500;
+         }
+
+         #status span
+         {
+           position:absolute;
+           top:70px;
+           left:90px;
+           font-size:18px;
+           color:gray;
+         }
+         #Focus i{
+            color: purple;
+            font-size: 45px;
+            position: absolute;
+            top: 160px;
+            left: 30px;
+         }
+         #Language i{
+            color: purple;
+            font-size: 45px;
+            position: absolute;
+            top: 300px;
+            left: 34px;
+         }
+         #Focus p{
+          position:absolute;
+          top:160px;
+          left:90px;
+          font-size:24px;
+          font-weight:500;
+          color:white;
+         }
+
+         #Focus span
+         {
+           position:absolute;
+           top:200px;
+           left:90px;
+           font-size:18px;
+           color:gray;
+         }
+
+         #Language p
+         {
+           position:absolute;
+           top:300px;
+           left:90px;
+           font-size:24px;
+           font-weight:500;
+           color:white;
+         }
+
+         #Language span
+         {
+            position:absolute;
+            top:340px;
+            left:90px;
+            font-size:18px;
+            color:gray;
+         }
+         #skills
+        {
+            width: 100%;
+            min-height: 350px;
+            background-color: black;
+            padding: 40px 0;   /* remove left & right padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            scroll-margin-top: 90px;
+        }
+
+        #skillhead
+        {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+          margin-bottom: 40px;
+        }
+
+        #skillhead h2
+        {
+          font-size: 45px;
+          margin: 0;
+          color: purple;
+        }
+
+        #skillhead i
+        {
+           color: purple;
+           font-size: 35px;
+        }
+
+        #container
+        {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+       .minc
+         {
+            width: 180px;
+            height: 180px;
+            background: #111827;
+            border: 1px solid #333;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+     .minc img
+    {
+       width: 55px;
+       height: 55px;
+    }
+
+     .minc p
+     {
+       color: white;
+       margin-top: 10px;
+       font-size: 14px;
+     }
+
+       .minc h4
+       {
+          color: white;
+          margin: 0 0 8px;
+          font-size: 18px;
+          text-align: center;
+         }
+
+    .minc span
+    {
+       color: #bdbdbd;
+       font-size: 12px;
+       text-align: center;
+    }
+    .minc:hover
+    {
+        box-shadow: 0 0 20px purple;
+        transform: scale(1.05);
+        z-index: 10;
+    }
+    #contact
+    {
+        width: 100%;
+        height: 85vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-margin-top: 90px;
+    }
+    #mes
+    {
+        width: 60%;
+        height: 120px;
+        background-color: #111827;
+        border-radius: 12px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        border: 1px solid purple;
+    }
+    #mes i
+    {
+        position: absolute;
+        left: 30px;
+        font-size: 75px;
+        color: purple;
+    }
+    #mes p
+    {
+        position: absolute;
+        left: 120px;
+        top: 20px;
+        font-size: 20px;
+        word-spacing: 1.2;
+        font-weight: lighter;
+    }
+    #butcon
+    {
+        width: 210px;
+        height: 50px;
+        background-color: #8f68ff;
+        position: absolute;
+        left: 700px;
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-radius: 8px;
+        border: none;
+    }
+    #butcon i
+    {
+        position: absolute;
+        top: 15px;
+        font-size: 20px;
+
+    }
+    #abouttitle
+    {
+        color: white;
+        font-size: 45px;
+        margin: 30px 0 50px;
+        text-align: center;
+    }
+    .card
+    {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover
+    {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 18px rgba(139,92,246,0.25);
+    }
+      #name #white
+      {
+         color: white;
+      }
+      #name #purple
+      {
+         color: #8B5CF6;
+      }
+      #name
+      {
+         display: flex;
+      }
+         
+        
+    </style>
+</head>
+<body>
+    <nav>
+      <div id="font">
+          <p id="white">Shreya</p>
+          <p id="purple">Mohite</p>
+      </div>
+       <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+       </ul>
+    </nav>
+    <main>
+    <div id="home">
+        <div id="info">
+            <p id="hi">Hi,i am</p>
+            <div id="name">
+                    <p id="white" style="font-size: 80px;">  Shreya</p>
+                    <p id="purple" style="font-size: 80px;">Mohite</p>
+      </div>
+      <p id="line">Full Stack Web Development Student</p>
+      <p id="dis">I enioy building responsive and user-friendly<br> web applications.I'm currently learning the MERN stack and<br> have experience with HTML, CSS, JavaScript, Git, GitHub, Java, and<br>Python. I'm passionate about solving problems and continuously improving my development skills.</p>
+
+         <a href="./contactpage.html"><button id="download">Contact me</button></a>
+        </div>
+        <div id="photo">
+         <div id="glow">
+         <img src="./profile.png">
+         </div>
+        </div>
+    </div>
+    <div id="about">
+        <h2 id="abouttitle">About Me</h2>
+      <div id="Ame">
+         <div class="card">
+            <div class="heading">
+            <i class="fa-solid fa-user-large" id="user"></i>
+            <p id="infome">About me</p>
+             </div>
+             <div id="dis2">
+            I'm a Computer Science student and an aspiring MERN
+               stack developer.I love creating websites and web
+               applications that are both functional and visually
+               appealing. I'm always curious to learn new technologies and build real-world projects to grow my skills.
+               </div>
+           
+        </div>
+         <div class="card">
+             <div id="education">
+                <i class="fa-solid fa-calendar-days"></i>
+                <p>Education</p>
+                <span>Computer Science studnet</span>
+            </div>
+            <div id="Email">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email</p>
+                <span>shreya@example.com</span>
+            </div>
+            <div id="Location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Location</p>
+                <span>India</span>
+            </div>
+         </div>
+
+        <div class="card">
+             <div id="status">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <p>Status</p>
+                <span>Student</span>
+            </div>
+            <div id="Focus">
+                 <i class="fa-solid fa-book-open"></i>
+                 <p>Focus</p>
+                 <span>Web Development</span>
+            </div>
+            <div id="Language">
+                <i class="fa-solid fa-globe"></i>
+                <p>Language</p>
+                <span>English,Hindi</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="skills">
+
+        <div id="skillhead">
+           <i class="fa-solid fa-code"></i>
+           <h2>Skills</h2>
+        </div>
+
+       <div id="container">
+
+           <div class="minc">
+              <img src="./html (1).png" alt="">
+              <p>HTML5</p>
+            </div>
+
+           <div class="minc">
+              <img src="./css-3.png" alt="">
+              <p>CSS3</p>
+            </div>
+
+
+           <div class="minc">
+              <img src="./github.png" alt="">
+              <p>Git</p>
+            </div>
+
+
+           <div class="minc">
+              <img src="./java.png" alt="">
+              <p>Java</p>
+            </div>
+
+           <div class="minc">
+              <img src="./python.png" alt="">
+              <p>Python</p>
+            </div>
+
+
+           <div class="minc">
+              <h4>Currently Learning</h4>
+              <span>React, Node.js,<br>Express.js,<br>MongoDB<br>Javascript</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+       <div id="mes">
+            <i class="fa-brands fa-telegram"></i>
+            <p>Let's Work Together<br>
+            i'm open to new oppertunity and exciting projects<br>feel free to reach out!</p>
+            <button id="butcon" onclick="window.location.href='contactpage.html'">Contact me
+               <i class="fa-solid fa-envelope"></i>
+            </button>
+        </div>
+    </div>
+</main>
+</body>
+</html>
